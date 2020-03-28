@@ -1,4 +1,4 @@
-# gingerbrich_frontend
+# gingerbrich
 
 ## Project setup
 ```
