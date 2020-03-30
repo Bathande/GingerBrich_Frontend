@@ -1,0 +1,27 @@
+<v-app class="register">
+    <v-container fill-height justify-center>
+        <v-card class="p-1">
+            <v-form class="p-5">
+                <v-toolbar-title d-flex class="pb-5">
+                     <v-img src="../../assets/download.png" height="100" ></v-img>
+                    GINGERBRICH</v-toolbar-title>
+                <v-text-field v-model="name" :rules="isRequiredRule" dense flat required outlined placeholder="Name">
+                </v-text-field>
+                <v-text-field v-model="surname" :rules="isRequiredRule" dense required flat outlined placeholder="Surname">
+                </v-text-field>
+                <v-text-field v-model="phoneNumber" dense flat outlined placeholder="Phone Number"></v-text-field>
+                <v-text-field v-model="address" dense flat outlined placeholder="address"></v-text-field>
+                <v-text-field v-model="idnumber" :rules="isRequiredRule" dense flat outlined placeholder="Id number"></v-text-field>
+                <v-select type="dropdown" :rules="isRequiredRule" dense required outlined v-model="gender" :items="genderOption"
+                    placeholder="Gender"></v-select>
+                <v-text-field v-model="email" :rules="emailRule" dense flat outlined placeholder="Email"></v-text-field>
+                <v-text-field v-model="password" :rules="isRequiredRule" type="password" dense flat outlined placeholder="Password">
+                </v-text-field>
+                <v-text-field v-model="confirmPassowrd" :rules="isRequiredRule" type="password" dense flat outlined
+                    placeholder="Confrim Password"></v-text-field>
+                <v-btn @click="submitRegisterUser">Register</v-btn>
+                <v-tool-
+            </v-form>
+        </v-card>
+    </v-container>
+</v-app>
