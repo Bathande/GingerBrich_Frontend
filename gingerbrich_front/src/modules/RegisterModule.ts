@@ -1,8 +1,14 @@
 import store from "@/store";
-import { Action, getModule, Module, Mutation, VuexModule,MutationAction } from "vuex-module-decorators";
+import {
+  Action,
+  getModule,
+  Module,
+  Mutation,
+  VuexModule,
+  MutationAction
+} from "vuex-module-decorators";
 import { registerUser } from "../Apis/RegisterApi";
 import { CustomerInterface } from "./../Interfaces/CustomerInterface";
-
 
 @Module({
   namespaced: true,
@@ -13,10 +19,13 @@ import { CustomerInterface } from "./../Interfaces/CustomerInterface";
 class RegisterModule extends VuexModule {
   user: CustomerInterface | null = null;
 
-  @MutationAction({ mutate: ['user'] })
+  @MutationAction({ mutate: ["user"] })
   async register(customer: CustomerInterface, usertype: string) {
-    const user:CustomerInterface|undefined = await registerUser(customer, usertype);
-    return {user} 
+    const user: CustomerInterface | undefined = await registerUser(
+      customer,
+      usertype
+    );
+    return { user };
   }
 }
 

@@ -2,16 +2,14 @@ export interface CustomerInterface {
   username: string;
   password: string;
   email: string;
-  address?: string | null;
-  phoneNumber?: number|null;
+  phoneNumber?: number | null;
   gender: string;
-  idNumber?: number | null;
   name: string;
   surname: string;
 }
 
 export interface UserLogin {
-  email: string;
+  username: string;
   password: string;
 }
 

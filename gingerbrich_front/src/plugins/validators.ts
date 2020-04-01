@@ -3,6 +3,4 @@ export const EmailRules = [
   (v: any) => /.+@.+/.test(v) || "Email Must Be Valid"
 ];
 
-export const isRequiredRule =[
-  (v: any) => !!v || "Email Is Required"
-]
+export const isRequiredRule = [(v: any) => !!v || "password Is Required"];

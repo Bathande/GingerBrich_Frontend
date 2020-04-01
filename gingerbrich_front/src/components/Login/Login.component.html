@@ -1,0 +1,16 @@
+<v-container class="login" fill-height justify-center>
+    <v-card class="pl-5 pr-5 pb-5">
+        <v-form class="pl-5 pr-5 pb-5 pt-2">
+            <v-toolbar-title d-flex class="pb-5">
+                <v-img Contain src="../../assets/download.png" contain height="100"></v-img>
+                GINGERBRICH
+            </v-toolbar-title>
+            <v-text-field v-model="userName" :rules="EmailRules" dense required flat outlined placeholder="username">
+            </v-text-field>
+            <v-text-field v-model="password" :rules="isRequiredRule" type="password" dense flat outlined
+                placeholder="Password">
+            </v-text-field>
+            <v-btn v-bind:disabled="userName ==='' || password ===''" @click="submitLoginUsser">Login</v-btn>
+        </v-form>
+    </v-card>
+</v-container>
