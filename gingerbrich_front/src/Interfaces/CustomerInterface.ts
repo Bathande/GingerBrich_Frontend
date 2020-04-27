@@ -14,6 +14,6 @@ export interface UserLogin {
 }
 
 export enum UserType {
-  customer,
-  admin
+  admin = 1,
+  customer = 2
 }

@@ -8,7 +8,7 @@ import {
   MutationAction
 } from "vuex-module-decorators";
 import { registerUser } from "../Apis/RegisterApi";
-import { CustomerInterface } from "./../Interfaces/CustomerInterface";
+import { CustomerInterface, UserType } from "./../Interfaces/CustomerInterface";
 
 @Module({
   namespaced: true,
@@ -20,10 +20,10 @@ class RegisterModule extends VuexModule {
   user: CustomerInterface | null = null;
 
   @MutationAction({ mutate: ["user"] })
-  async register(customer: CustomerInterface, usertype: string) {
+  async register(customer: CustomerInterface, usertype: UserType) {
     const user: CustomerInterface | undefined = await registerUser(
       customer,
-      usertype
+      1
     );
     return { user };
   }

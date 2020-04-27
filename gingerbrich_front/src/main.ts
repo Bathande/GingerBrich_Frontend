@@ -9,9 +9,10 @@ import "./plugins/fontAwesomeIcon"
 import Vuelidate from "vuelidate";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-
+import VueRouter from "vue-router";
 Vue.use(Vuelidate);
 Vue.use(Vuetify);
+Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
 new Vue({

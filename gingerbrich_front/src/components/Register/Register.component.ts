@@ -2,7 +2,8 @@ import Vue from "vue";
 import Component from "vue-class-component";
 import RegisterModule from "../../modules/RegisterModule";
 import { EmailRules, isRequiredRule } from "../../plugins/validators";
-import {} from "./../../plugins/validators";
+import { } from "./../../plugins/validators";
+import {UserType} from "../../Interfaces/CustomerInterface";
 
 @Component({})
 export default class RegisterComponent extends Vue {
@@ -28,7 +29,8 @@ export default class RegisterComponent extends Vue {
         name: this.name,
         surname: this.surname
       },
-      "customer"
+      UserType.admin
     );
+
   }
 }
