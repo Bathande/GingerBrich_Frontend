@@ -10,7 +10,7 @@ import {
 } from "vuex-module-decorators";
 import { loginUser } from "../Apis/LoginApi";
 import store from "@/store";
-
+import router from "../router/index";
 @Module({
   namespaced: true,
   name: "LoginModule",
@@ -22,7 +22,7 @@ class LoginModule extends VuexModule {
 
   @MutationAction({ mutate: ["user"] })
   async login(userLoggin: UserLogin) {
-    const user: CustomerInterface | undefined = await loginUser(userLoggin);
+    const user: CustomerInterface | string = await loginUser(userLoggin);
     return { user };
   }
 }

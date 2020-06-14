@@ -1,16 +1,16 @@
 <template>
   <v-app id="app">
-    <v-container>
+    <v-container class="d-flex flex-column h-100">
        <navBar />
       <router-view />
     </v-container>
   </v-app>
 </template>
 <script>
- import navBar from "./components/navbar/navbar.component.vue";
+import navBar from "./components/navbar/navbar.component";
 export default {
   components: {
-     navBar
+    navBar
   }
 };
 </script>

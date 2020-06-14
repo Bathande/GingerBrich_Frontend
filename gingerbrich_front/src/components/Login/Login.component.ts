@@ -10,6 +10,6 @@ export default class LoginComponent extends Vue {
   isRequiredRule = isRequiredRule;
 
   submitLoginUsser() {
-    LoginModule.login({ username: this.userName, password: this.password });
+    LoginModule.login({ username: this.userName.toLowerCase(), password: this.password });
   }
 }
